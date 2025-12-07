@@ -14,16 +14,8 @@ Production Architecture:
 ```
 epi-llm-rag/
 │
-├── data/
-│   ├── sample_papers/       # A few open-access abstracts
-│   └── annotations/         # Example extracted prevalence data
-│
 ├── notebooks/
-│   ├── 01_embedding.ipynb
-│   ├── 02_rag_pipeline.ipynb
-│   ├── 03_extraction_gpt5.ipynb
-│   └── 04_evaluation.ipynb
-│
+│  
 ├── src/
 │   ├── retriever/
 │   │   ├── embedder.py      # E5 or BioBERT embeddings
