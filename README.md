@@ -10,12 +10,35 @@ Production Architecture:
 • AWS for scalable compute
 ```
 ### Preprocessing pipeline
+```
 PDF
  → GROBID
  → sectioned text
  → clean normalization
  → chunking
  → embedding
+```
+### Extraction schema (prevalence / incidence)
+```
+{
+  "condition": "string",
+  "metric_type": "prevalence | incidence",
+  "value": "string",
+  "unit": "percentage | per 100,000 | per 1,000",
+  "population": "string",
+  "location": "string",
+  "year_range": "string",
+  "study_type": "string",
+  "confidence": "high | medium | low",
+  "sources": [
+    {
+      "paper_id": "string",
+      "section": "Results",
+      "quote": "string"
+    }
+  ]
+}
+```
 
 ## Structure
 
