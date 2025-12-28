@@ -1,14 +1,22 @@
 # Literature-RAG for Prevalence & Incidence Extraction
-A Retrieval-Augmented Generation (RAG) pipeline for automatically extracting epidemiological indicators (prevalence, incidence, measurement years, uncertainty) from global health literature using transformer embeddings and GPT-5.
+A Retrieval-Augmented Generation (RAG) pipeline for automatically extracting epidemiological indicators (prevalence, incidence, measurement years, uncertainty) from global health literature using transformer embeddings and GPT-4.
 
 Production Architecture:
 ```
-• BERT sentence embeddings (or E5-large-v2 for higher accuracy)
+• E5-large-v2 embeddings 
 • FAISS vector search
-• GPT-5 for structured information extraction from retrieved texts
+• GPT-4 for structured information extraction from retrieved texts
 • FastAPI for deployment
 • AWS for scalable compute
 ```
+### Preprocessing pipeline
+PDF
+ → GROBID
+ → sectioned text
+ → clean normalization
+ → chunking
+ → embedding
+
 ## Structure
 
 ```
